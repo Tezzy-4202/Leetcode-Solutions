@@ -1,0 +1,59 @@
+# 📊 Difference of Sums — C++ Solution
+
+This repository contains a simple C++ solution to compute the difference between the sum of numbers **not divisible** by `m` and those **divisible** by `m` in the range from `1` to `n`.
+
+---
+
+## 🔍 Intuition
+
+- Separate numbers from `1` to `n` into two groups:
+  - Numbers **divisible** by `m`
+  - Numbers **not divisible** by `m`
+- Compute the sum of each group.
+- Return the difference between them.
+
+---
+
+## 🧠 Approach
+
+- Loop through all numbers from `1` to `n`.
+- Use the modulo operator (`%`) to check if a number is divisible by `m`.
+- If a number is **not divisible**, add it to `sum1`.
+- If a number **is divisible**, add it to `sum2`.
+- Finally, return `sum1 - sum2`.
+
+---
+
+## ⏱️ Complexity
+
+- **Time Complexity:**  
+  $$O(n)$$  
+  (We loop through each number from `1` to `n` once.)
+
+- **Space Complexity:**  
+  $$O(1)$$  
+  (We use a constant amount of extra space.)
+
+---
+
+## 🧩 Code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    int differenceOfSums(int n, int m) {
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % m != 0) {
+                sum1 += i;
+            } else {
+                sum2 += i;
+            }
+        }
+        return sum1 - sum2;
+    }
+};
