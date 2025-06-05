@@ -1,4 +1,4 @@
-// Last updated: 6/5/2025, 11:36:50 AM
+// Last updated: 6/5/2025, 11:37:00 AM
 class Solution {
 public:
     string answerString(string word, int numFriends) {
