@@ -1,4 +1,4 @@
-// Last updated: 6/6/2025, 3:01:37 PM
+// Last updated: 6/6/2025, 3:43:33 PM
 class Solution {
 public:
     int c2n(char a){
@@ -16,13 +16,14 @@ public:
 
     int romanToInt(string s) {
      int result=0;
-     for ( int i=0;i<s.length();i++){
-        if ( i+1<s.length() && c2n(s[i]) < c2n(s[i+1])){
-            result -= c2n(s[i]);
-        }   else {
-            result += c2n(s[i]);
+     for(int i=0;i<s.length();i++){
+        if (i+1<s.length() && c2n(s[i])<c2n(s[i+1])){
+            result -=c2n(s[i]);
         }
-     }  
-     return result; 
+        else {
+            result +=c2n(s[i]);
+        }
+     }
+     return result;
     }
 };
