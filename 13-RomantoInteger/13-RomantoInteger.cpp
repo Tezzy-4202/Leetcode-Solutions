@@ -1,4 +1,4 @@
-// Last updated: 6/6/2025, 3:43:33 PM
+// Last updated: 6/6/2025, 3:43:42 PM
 class Solution {
 public:
     int c2n(char a){
