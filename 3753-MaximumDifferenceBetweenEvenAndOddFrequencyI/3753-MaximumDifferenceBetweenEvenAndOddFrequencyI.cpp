@@ -2,6 +2,7 @@
 class Solution {
 public:
     int maxDifference(string s) {
+        // Create a frequency array to count occurrences of each character (a-z)
         vector<int> mpp(26);
         int maxi = 0, mini = s.size();
         for (char c : s) mpp[c - 'a']++;
