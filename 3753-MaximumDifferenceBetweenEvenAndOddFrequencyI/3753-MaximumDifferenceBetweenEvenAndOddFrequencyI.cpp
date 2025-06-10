@@ -4,7 +4,10 @@ public:
     int maxDifference(string s) {
         // Create a frequency array to count occurrences of each character (a-z)
         vector<int> mpp(26);
+        // Initialize maxi to 0 (will store maximum odd frequency)
+        // Initialize mini to string size (will store minimum even frequency)
         int maxi = 0, mini = s.size();
+        
         for (char c : s) mpp[c - 'a']++;
         for (int i = 0 ; i < 26; i++) {
             if (mpp[i] % 2 != 0) maxi = max(maxi, mpp[i]);
