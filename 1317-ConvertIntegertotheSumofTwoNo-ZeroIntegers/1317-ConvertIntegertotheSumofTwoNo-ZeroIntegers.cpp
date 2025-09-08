@@ -1,4 +1,4 @@
-// Last updated: 08/09/2025, 09:56:28
+// Last updated: 08/09/2025, 10:03:56
 class Solution {
 public:
     bool isNoZero(int x){
@@ -11,7 +11,7 @@ public:
 
     vector<int> getNoZeroIntegers(int n) {
         vector<int> arr;
-        for ( int i=1;i<n;++i){
+        for ( int i=1;i<=n/2;++i){
             if ( isNoZero(i) && isNoZero(n-i)){
                 return {i,n-i};
             }
